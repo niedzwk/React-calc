@@ -1,0 +1,35 @@
+.calculator-button {
+  border: none;
+  margin-bottom: 1px;
+  width: calc(25% - 1px);
+  font-size: 15px;
+  transition-duration: 0.2s;
+
+  &:active {
+    background-color: #cccccc;
+  }
+
+  &:hover {
+    @media (min-width: 1025px) {
+      background-color: #cccccc;
+    }
+  }
+
+  &_is-equal {
+    background-color: rgb(219, 179, 0);
+    color: black;
+    &:hover {
+      @media (min-width: 1025px) {
+        background-color: rgb(172, 140, 0);
+      }
+    }
+  }
+
+  &_is-number {
+    background-color: #ffffff;
+  }
+
+  &_is-operation {
+    background-color: #eeeeee;
+  }
+}

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Display from "./components/Display/Display";
+import MainKeyboard from "./components/MainKeyboard/MainKeyboard";
+import bemCssModules from "bem-css-modules";
+
+import { default as AppStyles } from "./App.module.scss";
+import StoreProvider from "./store/StoreProvider";
+
+const style = bemCssModules(AppStyles);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider>
+      <div className={style()}>
+        <Display />
+        <MainKeyboard />
+      </div>
+    </StoreProvider>
   );
 }
 
