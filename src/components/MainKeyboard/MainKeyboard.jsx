@@ -37,28 +37,32 @@ const MainKeyboard = () => {
   }
 
   const addNumber = () => {
-    if (activeOperation !== null) doingFunction(activeOperation);
+    if (activeOperation !== null && waitingForFunction)
+      doingFunction(activeOperation);
     else setPreviousValue(Number(displayValue));
     setActiveOperation("+");
     setWaitingForFunction(false);
   };
 
   const substractNumber = () => {
-    if (activeOperation !== null) doingFunction(activeOperation);
+    if (activeOperation !== null && waitingForFunction)
+      doingFunction(activeOperation);
     else setPreviousValue(Number(displayValue));
     setActiveOperation("-");
     setWaitingForFunction(false);
   };
 
   const multiplyNumber = () => {
-    if (activeOperation !== null) doingFunction(activeOperation);
+    if (activeOperation !== null && waitingForFunction)
+      doingFunction(activeOperation);
     else setPreviousValue(Number(displayValue));
     setActiveOperation("*");
     setWaitingForFunction(false);
   };
 
   const divideNumber = () => {
-    if (activeOperation !== null) doingFunction(activeOperation);
+    if (activeOperation !== null && waitingForFunction)
+      doingFunction(activeOperation);
     else setPreviousValue(Number(displayValue));
     setActiveOperation("/");
     setWaitingForFunction(false);
@@ -103,7 +107,11 @@ const MainKeyboard = () => {
       : setDisplayValue((prev) => String(0 + Math.abs(Number(prev))));
 
   const addComma = () => {
-    if (!displayValue.includes(".")) setDisplayValue((prev) => prev + ".");
+    if (displayValue === null) {
+      setDisplayValue("0.");
+      setWaitingForFunction(true);
+    } else if (!String(displayValue).includes("."))
+      setDisplayValue((prev) => prev + ".");
   };
 
   function addition() {
