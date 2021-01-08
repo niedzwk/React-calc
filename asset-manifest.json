@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-calc/static/css/main.1038d65d.chunk.css",
+    "main.js": "/React-calc/static/js/main.69c57db9.chunk.js",
+    "main.js.map": "/React-calc/static/js/main.69c57db9.chunk.js.map",
+    "runtime-main.js": "/React-calc/static/js/runtime-main.3f5decd6.js",
+    "runtime-main.js.map": "/React-calc/static/js/runtime-main.3f5decd6.js.map",
+    "static/js/2.074463db.chunk.js": "/React-calc/static/js/2.074463db.chunk.js",
+    "static/js/2.074463db.chunk.js.map": "/React-calc/static/js/2.074463db.chunk.js.map",
+    "index.html": "/React-calc/index.html",
+    "static/css/main.1038d65d.chunk.css.map": "/React-calc/static/css/main.1038d65d.chunk.css.map",
+    "static/js/2.074463db.chunk.js.LICENSE.txt": "/React-calc/static/js/2.074463db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f5decd6.js",
+    "static/js/2.074463db.chunk.js",
+    "static/css/main.1038d65d.chunk.css",
+    "static/js/main.69c57db9.chunk.js"
+  ]
+}
