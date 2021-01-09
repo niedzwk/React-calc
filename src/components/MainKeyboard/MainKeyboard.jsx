@@ -157,7 +157,11 @@ const MainKeyboard = () => {
       <Button content="%" onClick={percent} isOperation />
       <Button content="CE" onClick={clearCurrentValue} isOperation />
       <Button content="C" onClick={clearAll} isOperation />
-      <Button content="<-" onClick={deleteCharacter} isOperation />
+      <Button
+        content={<i className="fas fa-backspace"></i>}
+        onClick={deleteCharacter}
+        isOperation
+      />
       <Button content="1/x" onClick={fraction} isOperation />
       <Button content="x^2" onClick={power} isOperation />
       <Button content="sqrt" onClick={square} isOperation />
