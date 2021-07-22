@@ -36,37 +36,45 @@ const MainKeyboard = () => {
     else if (operand === "/") divide();
   }
 
-  const addNumber = () => {
+  const operation = (operationSign) => {
     if (activeOperation !== null && waitingForFunction)
       doingFunction(activeOperation);
     else setPreviousValue(Number(displayValue));
-    setActiveOperation("+");
+    setActiveOperation(operationSign);
     setWaitingForFunction(false);
-  };
+  }
 
-  const substractNumber = () => {
-    if (activeOperation !== null && waitingForFunction)
-      doingFunction(activeOperation);
-    else setPreviousValue(Number(displayValue));
-    setActiveOperation("-");
-    setWaitingForFunction(false);
-  };
+  // const addNumber = () => {
+  //   if (activeOperation !== null && waitingForFunction)
+  //     doingFunction(activeOperation);
+  //   else setPreviousValue(Number(displayValue));
+  //   setActiveOperation("+");
+  //   setWaitingForFunction(false);
+  // };
 
-  const multiplyNumber = () => {
-    if (activeOperation !== null && waitingForFunction)
-      doingFunction(activeOperation);
-    else setPreviousValue(Number(displayValue));
-    setActiveOperation("*");
-    setWaitingForFunction(false);
-  };
+  // const substractNumber = () => {
+  //   if (activeOperation !== null && waitingForFunction)
+  //     doingFunction(activeOperation);
+  //   else setPreviousValue(Number(displayValue));
+  //   setActiveOperation("-");
+  //   setWaitingForFunction(false);
+  // };
 
-  const divideNumber = () => {
-    if (activeOperation !== null && waitingForFunction)
-      doingFunction(activeOperation);
-    else setPreviousValue(Number(displayValue));
-    setActiveOperation("/");
-    setWaitingForFunction(false);
-  };
+  // const multiplyNumber = () => {
+  //   if (activeOperation !== null && waitingForFunction)
+  //     doingFunction(activeOperation);
+  //   else setPreviousValue(Number(displayValue));
+  //   setActiveOperation("*");
+  //   setWaitingForFunction(false);
+  // };
+
+  // const divideNumber = () => {
+  //   if (activeOperation !== null && waitingForFunction)
+  //     doingFunction(activeOperation);
+  //   else setPreviousValue(Number(displayValue));
+  //   setActiveOperation("/");
+  //   setWaitingForFunction(false);
+  // };
 
   const square = () => {
     setDisplayValue((prev) => Math.sqrt(Number(prev)));
@@ -165,19 +173,19 @@ const MainKeyboard = () => {
       <Button content="1/x" onClick={fraction} isOperation />
       <Button content="x^2" onClick={power} isOperation />
       <Button content="sqrt" onClick={square} isOperation />
-      <Button content="/" onClick={divideNumber} isOperation />
+      <Button content="/" onClick={()=>operation("/")} isOperation />
       <Button content="7" onClick={addCharacter} isNumber />
       <Button content="8" onClick={addCharacter} isNumber />
       <Button content="9" onClick={addCharacter} isNumber />
-      <Button content="X" onClick={multiplyNumber} isOperation />
+      <Button content="X" onClick={()=>operation("*")} isOperation />
       <Button content="4" onClick={addCharacter} isNumber />
       <Button content="5" onClick={addCharacter} isNumber />
       <Button content="6" onClick={addCharacter} isNumber />
-      <Button content="-" onClick={substractNumber} isOperation />
+      <Button content="-" onClick={()=>operation("-")} isOperation />
       <Button content="1" onClick={addCharacter} isNumber />
       <Button content="2" onClick={addCharacter} isNumber />
       <Button content="3" onClick={addCharacter} isNumber />
-      <Button content="+" onClick={addNumber} isOperation />
+      <Button content="+" onClick={()=>operation("+")} isOperation />
       <Button content="+/-" onClick={changeSign} isNumber />
       <Button content="0" onClick={addCharacter} isNumber />
       <Button content="," onClick={addComma} isNumber />
