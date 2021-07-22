@@ -44,38 +44,6 @@ const MainKeyboard = () => {
     setWaitingForFunction(false);
   }
 
-  // const addNumber = () => {
-  //   if (activeOperation !== null && waitingForFunction)
-  //     doingFunction(activeOperation);
-  //   else setPreviousValue(Number(displayValue));
-  //   setActiveOperation("+");
-  //   setWaitingForFunction(false);
-  // };
-
-  // const substractNumber = () => {
-  //   if (activeOperation !== null && waitingForFunction)
-  //     doingFunction(activeOperation);
-  //   else setPreviousValue(Number(displayValue));
-  //   setActiveOperation("-");
-  //   setWaitingForFunction(false);
-  // };
-
-  // const multiplyNumber = () => {
-  //   if (activeOperation !== null && waitingForFunction)
-  //     doingFunction(activeOperation);
-  //   else setPreviousValue(Number(displayValue));
-  //   setActiveOperation("*");
-  //   setWaitingForFunction(false);
-  // };
-
-  // const divideNumber = () => {
-  //   if (activeOperation !== null && waitingForFunction)
-  //     doingFunction(activeOperation);
-  //   else setPreviousValue(Number(displayValue));
-  //   setActiveOperation("/");
-  //   setWaitingForFunction(false);
-  // };
-
   const square = () => {
     setDisplayValue((prev) => Math.sqrt(Number(prev)));
   };
